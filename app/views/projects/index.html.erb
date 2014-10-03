@@ -1,0 +1,19 @@
+<h1>Listing projects</h1>
+<br>
+<%= link_to 'New Project', new_project_path, class: 'button' %>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to project.title, project %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
