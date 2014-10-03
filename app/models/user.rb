@@ -6,6 +6,22 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
 
-  has_many :assignments
-  has_many :projects, through: :assignments
+  has_many :mentships
+  has_many :projects, through: :mentships
+
+  def created_projects
+    projects = []
+    self.mentships.where(role: "creator").each do |ments|
+      projects << Project.find(ments.project_id)
+    end
+    projects
+  end
+
+  def joined_projects
+    projects = []
+    self.mentships.where(role: "participant").each do |ments|
+      projects << Project.find(ments.project_id)
+    end
+    projects
+  end
 end

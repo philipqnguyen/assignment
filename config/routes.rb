@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'projects#index'
 
   get 'my_desk' => 'projects#my_desk'
+
+  post 'join_project/:id' => 'projects#join_project', as: :join_project
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

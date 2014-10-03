@@ -1,0 +1,16 @@
+<div class="row">
+  <h1 class="small-4 columns small-centered">My Desk</h1>
+
+  <section class="small-6 columns">
+    <h2>Projects I created</h2>
+    <% current_user.created_projects.each do |project| %>
+      <%= link_to project.title, project %>
+    <% end %>
+  </section>
+  <section class="small-6 columns">
+    <h2>Projects I joined</h2>
+    <% current_user.joined_projects.each do |project| %>
+      <%= link_to project.title, project %>
+    <% end %>
+  </section>
+</div>

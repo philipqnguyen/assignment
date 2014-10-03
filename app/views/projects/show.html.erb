@@ -6,9 +6,31 @@
 </p>
 
 <p>
+  <strong>Creator:</strong>
+  <%= @creator.username %>
+</p>
+
+<% if @participants.count > 0 %>
+<p>
+  <strong>Participants:</strong>
+  <% @participants.each_with_index do |participant, index| %>
+    <%= participant.username %>
+    <% if index != @participants.count - 1 %>
+      |
+    <% end %>
+  <% end %>
+</p>
+<% end %>
+
+<p>
   <strong>Content:</strong>
   <%= @project.content %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<% if current_user == @project.creator %>
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %> |
+  <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% else %>
+  <%= link_to 'Join project', join_project_path(@project), method: :post %>
+<% end %>
