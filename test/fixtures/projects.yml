@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+project_1:
+  id: 1
+  title: First Project
+  content: The body of the first project
+
+project_2:
+  id: 2
+  title: Second Project
+  content: The body of the second project
