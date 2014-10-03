@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   def created_projects
     projects = []
-    self.mentships.where(role: "creator").each do |ments|
+    mentships.where(role: 'creator').each do |ments|
       projects << Project.find(ments.project_id)
     end
     projects
@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 
   def joined_projects
     projects = []
-    self.mentships.where(role: "participant").each do |ments|
+    mentships.where(role: 'participant').each do |ments|
       projects << Project.find(ments.project_id)
     end
     projects

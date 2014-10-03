@@ -1,6 +1,6 @@
 # This is the configuration used to check the rubocop source code.
 
-# Documentation:
+Documentation:
   Enabled: false  # Ignore errors in comments and documentation
 
 # StringLiterals:

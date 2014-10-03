@@ -7,20 +7,20 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 park = Project.create(title: 'Build a theme park',
-                     content: 'Lorem ipsum dolor sit amet, duo meis eligendi
+                      content: 'Lorem ipsum dolor sit amet, duo meis eligendi
                      postulant ad. Ad usu doctus saperet evertitur, ea amet
                      ceteros adipisci pri. Natum audiam pri id, at alienum
                      principes forensibus vel. Habeo persecuti te mel. Sit id
                      viderer volumus vituperatoribus. Dicunt menandri usu cu,
                      per eius blandit ex.')
 everest = Project.create(title: 'Climb Everest',
-                      content: 'Quidam platonem persequeris vel cu, graeco
+                         content: 'Quidam platonem persequeris vel cu, graeco
                       nonumes has et. Nam quaestio salutatus voluptatibus an,
                       suas errem sea ea. Nec at tempor essent euripidis. His
                       vitae alterum hendrerit ei, ex nam causae euismod
                       recteque. Aeque fastidii constituam ne pri.')
 facebook = Project.create(title: 'Code Facebook 2',
-                    content: 'Te pro semper assueverit disputationi, at omnium
+                          content: 'Te pro semper assueverit disputationi, at omnium
                     equidem usu, sea ea graeci everti option. Cum ei dico
                     diam dicant, ei fugit democritum quo. Id accusam invenire
                     referrentur nam, probo efficiantur cu eum, te sea lorem
@@ -28,7 +28,7 @@ facebook = Project.create(title: 'Code Facebook 2',
                     ea vim. Nam probatus phaedrum ocurreret ex. Eu mel nisl
                     homero ullamcorper, ad solet dolorum gubergren vim.')
 twitter = Project.create(title: 'Code Twitter 2',
-                       content: 'Te pro semper assueverit disputationi, at
+                         content: 'Te pro semper assueverit disputationi, at
                        omnium equidem usu, sea ea graeci everti option. Cum
                        ei dico diam dicant, ei fugit democritum quo. Id
                        accusam invenire referrentur nam, probo efficiantur cu

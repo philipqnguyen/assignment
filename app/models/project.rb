@@ -21,13 +21,12 @@ class Project < ActiveRecord::Base
   end
 
   def creator
-    User.find(self.mentships.where(role: 'creator')[0].user_id)
+    User.find(mentships.where(role: 'creator')[0].user_id)
   rescue
     NilUser.new
   end
 
   def participants
-
     participating_users participating_mentships
 
   rescue
@@ -39,7 +38,7 @@ class Project < ActiveRecord::Base
   def participating_mentships
     mentship_results = []
 
-    self.mentships.where(role: 'participant').each do |ments|
+    mentships.where(role: 'participant').each do |ments|
       mentship_results << ments
     end
   end
