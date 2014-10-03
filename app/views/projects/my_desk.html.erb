@@ -4,13 +4,13 @@
   <section class="small-6 columns">
     <h2>Projects I created</h2>
     <% current_user.created_projects.each do |project| %>
-      <%= link_to project.title, project %>
+      <div><%= link_to project.title, project %></div>
     <% end %>
   </section>
   <section class="small-6 columns">
     <h2>Projects I joined</h2>
     <% current_user.joined_projects.each do |project| %>
-      <%= link_to project.title, project %>
+      <div><%= link_to project.title, project %></div>
     <% end %>
   </section>
 </div>

@@ -32,5 +32,5 @@
   <%= link_to 'Back', projects_path %> |
   <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% else %>
-  <%= link_to 'Join project', join_project_path(@project), method: :post %>
+  <%= link_to 'Join project', join_project_path(@project), method: :post, class: 'button' %>
 <% end %>

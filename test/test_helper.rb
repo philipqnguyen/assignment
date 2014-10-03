@@ -24,6 +24,15 @@ module ActiveSupport
     def sign_out
       click_on 'Sign out'
     end
+
+    def create_project
+      visit new_project_path
+
+      fill_in 'Title', with: 'WOOO'
+      fill_in 'Content', with: 'OMG YA'
+
+      click_on 'Create Project'
+    end
   end
 end
 
